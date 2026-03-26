@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Hub - الصفحة الرئيسية</title>
+    <link rel="stylesheet" href="play.css">
+</head>
+<body>
+    <header id="header" class="header-main">
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="gaming_13119663.png" alt="Game Hub Logo" class="logo">
+                <h1 id="title">Game Hub</h1>
+            </div>
+            <button class="hamburger-menu" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav" id="nav-menu">
+                <a href="#" class="nav-link">الرئيسية</a>
+                <a href="#" class="nav-link">المتجر</a>
+                <a href="#" class="nav-link">الإحصائيات</a>
+                <a href="#" class="nav-link">الدعم</a>
+            </nav>
+            <div class="header-actions">
+                <button id="lang-toggle" class="lang-btn">🌐 EN</button>
+                <button id="logout-btn" class="logout-btn">تسجيل الخروج</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="hero-text">
+                <h2>أهلاً بك في Game Hub</h2>
+                <p>اكتشف الآلاف من الألعاب المذهلة</p>
+            </div>
+        </section>
+
+        <section class="featured-section">
+            <h2 class="section-title">ألعابنا المميزة</h2>
+            <div class="games-grid">
+                <div class="game-card">
+                    <div class="card-image arcade-icon">🎮</div>
+                    <h3>اركيد</h3>
+                    <p>ألعاب كلاسيكية وممتعة</p>
+                    <a href="ply/اركيد/a.html" class="card-btn">اللعب الآن →</a>
+                </div>
+                <div class="game-card">
+                    <div class="card-image sports-icon">⚽</div>
+                    <h3>رياضة</h3>
+                    <p>ألعاب رياضية مشوقة</p>
+                    <a href="ply/رياضة/o.html" class="card-btn">اللعب الآن →</a>
+                </div>
+                <div class="game-card">
+                    <div class="card-image open-icon">🌍</div>
+                    <h3>عالم مفتوح</h3>
+                    <p>استكشف عوالم ضخمة</p>
+                    <a href="ply/عالم مفتوح/open.html" class="card-btn">اللعب الآن →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>اضغط على الزر أدناه للبدء</h2>
+            <a href="ply/play.html" class="cta-btn">🎮 اذهب لقسم الألعاب</a>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>عن Game Hub</h4>
+                <p>منصة الألعاب الرائدة في الشرق الأوسط</p>
+            </div>
+            <div class="footer-section">
+                <h4>الروابط السريعة</h4>
+                <ul>
+                    <li><a href="#">الرئيسية</a></li>
+                    <li><a href="#">الألعاب</a></li>
+                    <li><a href="#">التقييمات</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>تواصل معنا</h4>
+                <p>البريد: support@gamehub.com</p>
+                <p>الهاتف: +966 1234 5678</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Game Hub. جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+<script>
+    // Check if user is logged in
+    if (!localStorage.getItem('currentUser')) {
+        window.location.href = 'ply/log.html';
+    }
+
+    const translations = {
+        ar: {
+            title: 'Game Hub',
+            home: 'الرئيسية',
+            services: 'خدماتنا',
+            contact: 'تواصل معنا',
+            play: 'Play',
+            langButton: '🌐 English',
+            randomFact: '🎲 حقيقة عشوائية',
+            randomFacts: [
+                'GTA 5 has sold over 180 million copies worldwide!',
+                'Red Dead Redemption 2 took 8 years to develop.',
+                'Minecraft has over 140 million active players.',
+                'The Witcher 3 won over 250 Game of the Year awards.',
+                'Assassin\'s Creed Valhalla is set in the Viking Age.',
+                'Cyberpunk 2077 was delayed multiple times due to its complexity.',
+                'Skyrim has over 600 hours of gameplay on average.',
+                'Pac-Man was created in 1980 and is still popular today.',
+                'Tetris was invented in the Soviet Union.',
+                'Space Invaders revolutionized the gaming industry.'
+            ]
+        },
+        en: {
+            title: 'Game Hub',
+            home: 'Home',
+            services: 'Our Services',
+            contact: 'Contact Us',
+            play: 'Play',
+            langButton: '🌐 العربية',
+            randomFact: '🎲 Random Fact',
+            randomFacts: [
+                'GTA 5 has sold over 180 million copies worldwide!',
+                'Red Dead Redemption 2 took 8 years to develop.',
+                'Minecraft has over 140 million active players.',
+                'The Witcher 3 won over 250 Game of the Year awards.',
+                'Assassin\'s Creed Valhalla is set in the Viking Age.',
+                'Cyberpunk 2077 was delayed multiple times due to its complexity.',
+                'Skyrim has over 600 hours of gameplay on average.',
+                'Pac-Man was created in 1980 and is still popular today.',
+                'Tetris was invented in the Soviet Union.',
+                'Space Invaders revolutionized the gaming industry.'
+            ]
+        }
+    };
+
+    let currentLang = localStorage.getItem('lang') || 'ar';
+
+    function updateLanguage() {
+        document.getElementById('title').textContent = translations[currentLang].title;
+        const navLinks = document.querySelectorAll('.nav a');
+        navLinks[0].textContent = translations[currentLang].home;
+        navLinks[1].textContent = translations[currentLang].services;
+        navLinks[2].textContent = translations[currentLang].contact;
+        document.querySelector('#div1 h2').textContent = translations[currentLang].play;
+        document.getElementById('lang-toggle').textContent = translations[currentLang].langButton;
+
+        // Update random fact button
+        const randomBtn = document.getElementById('random-fact-btn');
+        if (randomBtn) {
+            randomBtn.textContent = translations[currentLang].randomFact;
+        }
+    }
+
+    // ظهور تدريجي للعناصر عند التحميل
+    const header = document.getElementById('header');
+    const div1 = document.getElementById('div1');
+
+    window.addEventListener('load', () => {
+        header.classList.add('show');
+        setTimeout(() => div1.classList.add('show'), 400);
+        updateLanguage(); // Update after load
+
+        // Add a random fact button
+        const randomFactButton = document.createElement('button');
+        randomFactButton.id = 'random-fact-btn';
+        randomFactButton.textContent = translations[currentLang].randomFact;
+        randomFactButton.style.cssText = 'position: fixed; bottom: 20px; right: 20px; padding: 12px 18px; background: linear-gradient(135deg, #ff6b6b, #ffa726); color: white; border: none; border-radius: 50px; cursor: pointer; font-weight: bold; box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: all 0.3s ease; z-index: 1000; font-size: 14px;';
+        document.body.appendChild(randomFactButton);
+
+        randomFactButton.addEventListener('click', function() {
+            const facts = translations[currentLang].randomFacts;
+            const randomFact = facts[Math.floor(Math.random() * facts.length)];
+            alert(randomFact);
+            // Animate the button
+            this.style.transform = 'scale(1.2) rotate(10deg)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1) rotate(0deg)';
+            }, 300);
+        });
+    });
+
+    // Language toggle
+    document.getElementById('lang-toggle').addEventListener('click', function() {
+        currentLang = currentLang === 'ar' ? 'en' : 'ar';
+        localStorage.setItem('lang', currentLang);
+        updateLanguage();
+    });
+
+    // زر Play تفاعلي
+    const playBtn = document.querySelector('#div1 button');
+    const playText = playBtn.querySelector('h2');
+
+    playBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        playText.textContent = "Loading...";
+        setTimeout(() => {
+            window.location.href = 'ply/play.html';
+        }, 1000);
+    });
+
+    document.getElementById('logout-btn').addEventListener('click', function() {
+        localStorage.removeItem('currentUser');
+        localStorage.removeItem('lang');
+        window.location.href = 'ply/log.html';
+    });
+
+    // Hamburger Menu
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+        
+        // Close menu when link is clicked
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+    }
+</script>
+
+</body>
+</html>

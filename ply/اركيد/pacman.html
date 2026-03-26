@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>باك مان - Game Hub</title>
+    <link rel="stylesheet" href="../عالم مفتوح/game-play.css">
+</head>
+<body>
+    <header class="games-header">
+        <div class="header-content">
+            <div class="logo-section">
+                <a href="../../index.html" class="logo-link">
+                    <img src="../../gaming_13119663.png" alt="Game Hub Logo" class="logo">
+                    <h1>Game Hub</h1>
+                </a>
+            </div>
+            <nav class="games-nav">
+                <a href="../../index.html" class="nav-link">الرئيسية</a>
+                <a href="../play.html" class="nav-link">قسم الألعاب</a>
+                <a href="a.html" class="nav-link">العودة</a>
+            </nav>
+            <div class="header-actions">
+                <button id="lang-toggle" class="lang-btn">🌐 EN</button>
+                <button id="logout-btn" class="logout-btn">خروج</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="games-main">
+        <section class="game-intro">
+            <h2>👾 باك مان</h2>
+            <p>أسطورة الألعاب الكلاسيكية في نسخة حديثة مثيرة</p>
+        </section>
+
+        <div class="game-content">
+            <div class="game-info">
+                <h3>معلومات اللعبة</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <strong>المطور:</strong>
+                        <p>Namco</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>سنة الإصدار:</strong>
+                        <p>2024</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>النوع:</strong>
+                        <p>أركيد، مغامرة</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>التقييم:</strong>
+                        <p>★★★★★ (9.1/10)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-description">
+                <h3>وصف اللعبة</h3>
+                <p>العودة إلى الجذور مع نسخة حديثة من لعبة باك مان الكلاسيكية الخالدة. تحكم في باك مان وادخل المتاهات المثيرة لجمع كل النقاط والثمار قبل أن تمسك بك الأشباح الملونة الأربعة (الأحمر والوردي والأزرق والأبيض).</p>
+                <p>تتميز اللعبة برسومات محسنة وموسيقى عصرية وتحديات متزايدة الصعوبة. استخدم الطاقة القوية لتحويل الأشباح إلى فريسة والعب على عدة مستويات مختلفة بمتاهات فريدة.</p>
+            </div>
+
+            <div class="gameplay-features">
+                <h3>مميزات اللعبة</h3>
+                <ul class="features-list">
+                    <li>🎮 رسومات محسنة بجودة عالية</li>
+                    <li>🏃 لعبة سريعة ومثيرة بأكشن مستمر</li>
+                    <li>🌈 ألعاب متعددة الألوان والمستويات</li>
+                    <li>⭐ نظام نقاط وإحصائيات متقدم</li>
+                    <li>🎵 موسيقى تصويتية عصرية</li>
+                    <li>🏆 ترتيب أعلى اللاعبين عالمياً</li>
+                </ul>
+            </div>
+
+            <button class="start-btn">▶️ ابدأ اللعب الآن</button>
+        </div>
+    </main>
+
+    <footer class="games-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>حول هذه اللعبة</h4>
+                <p>أسطورة الألعاب الكلاسيكية الخالدة</p>
+            </div>
+            <div class="footer-section">
+                <h4>الروابط</h4>
+                <ul>
+                    <li><a href="../../index.html">الصفحة الرئيسية</a></li>
+                    <li><a href="../play.html">قسم الألعاب</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Game Hub. جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script>
+        // Logout button functionality
+        document.getElementById('logout-btn').addEventListener('click', function() {
+            localStorage.removeItem('currentUser');
+            localStorage.removeItem('lang');
+            window.location.href = '../log.html';
+        });
+
+        // Language toggle
+        document.getElementById('lang-toggle').addEventListener('click', function() {
+            const currentLang = localStorage.getItem('lang') || 'ar';
+            const newLang = currentLang === 'ar' ? 'en' : 'ar';
+            localStorage.setItem('lang', newLang);
+            location.reload();
+        });
+
+        // Start game button
+        document.querySelector('.start-btn').addEventListener('click', function() {
+            alert('🎮 شكراً لك على اختيار لعبتنا! يمكنك الآن البدء باللعب.');
+            this.textContent = '⏸️ جاري التشغيل...';
+            setTimeout(() => {
+                this.textContent = '▶️ استأنف اللعب';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

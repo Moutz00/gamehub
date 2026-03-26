@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول - Game Hub</title>
+    <link rel="stylesheet" href="log.css">
+</head>
+<body>
+    <header class="login-header">
+        <div class="login-header-content">
+            <div class="logo-group">
+                <img src="gaming_13119663.png" alt="Game Hub Logo" class="logo">
+                <h1>Game Hub</h1>
+            </div>
+            <button id="lang-toggle" class="lang-toggle-btn">🌐 EN</button>
+        </div>
+    </header>
+
+    <main class="login-main">
+        <div class="login-container">
+            <div class="login-card">
+                <div class="form-toggle">
+                    <button id="login-btn" class="toggle-btn active">تسجيل الدخول</button>
+                    <button id="register-btn" class="toggle-btn">إنشاء حساب</button>
+                </div>
+
+                <form id="login-form" class="form active-form">
+                    <h2>مرحباً بعودة</h2>
+                    <div class="form-group">
+                        <input type="email" id="login-email" placeholder="البريد الإلكتروني" required>
+                        <span class="form-icon">📧</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="login-password" placeholder="كلمة المرور" required>
+                        <span class="form-icon">🔐</span>
+                    </div>
+                    <div class="captcha-group">
+                        <label id="login-captcha-label">التحقق: 2 + 3 = ?</label>
+                        <input type="text" id="login-captcha" placeholder="الإجابة" required>
+                    </div>
+                    <button type="submit" class="submit-btn">دخول</button>
+                    <p class="error" id="login-error"></p>
+                </form>
+
+                <form id="register-form" class="form">
+                    <h2>يسرنا بإنضمامك</h2>
+                    <div class="form-group">
+                        <input type="text" id="register-username" placeholder="u0627سم المستخدم" required>
+                        <span class="form-icon">👤</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="register-email" placeholder="البريد الإلكتروني" required>
+                        <span class="form-icon">📧</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="register-password" placeholder="كلمة مرور قوية" required>
+                        <span class="form-icon">🔐</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="register-confirm" placeholder="تأكيد كلمة المرور" required>
+                        <span class="form-icon">🔐</span>
+                    </div>
+                    <div class="captcha-group">
+                        <label id="register-captcha-label">التحقق: 2 + 3 = ?</label>
+                        <input type="text" id="register-captcha" placeholder="الإجابة" required>
+                    </div>
+                    <button type="submit" class="submit-btn">إنشاء حساب</button>
+                    <p class="error" id="register-error"></p>
+                </form>
+
+                <div class="social-login">
+                    <p>أو الدخول السريع</p>
+                    <button id="google-login" class="social-btn google-btn">
+                        <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google" width="20" height="20">
+                        Google
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="login-footer">
+        <p>&copy; 2024 Game Hub. جميع الحقوق محفوظة</p>
+    </footer>
+
+    <script src="log.js"></script>
+</body>
+</html>

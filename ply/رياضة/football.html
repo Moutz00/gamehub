@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كرة القدم - Game Hub</title>
+    <link rel="stylesheet" href="../عالم مفتوح/game-play.css">
+</head>
+<body>
+    <header class="games-header">
+        <div class="header-content">
+            <div class="logo-section">
+                <a href="../../index.html" class="logo-link">
+                    <img src="../../gaming_13119663.png" alt="Game Hub Logo" class="logo">
+                    <h1>Game Hub</h1>
+                </a>
+            </div>
+            <nav class="games-nav">
+                <a href="../../index.html" class="nav-link">الرئيسية</a>
+                <a href="../play.html" class="nav-link">قسم الألعاب</a>
+                <a href="o.html" class="nav-link">العودة</a>
+            </nav>
+            <div class="header-actions">
+                <button id="lang-toggle" class="lang-btn">🌐 EN</button>
+                <button id="logout-btn" class="logout-btn">خروج</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="games-main">
+        <section class="game-intro">
+            <h2>⚽ كرة القدم</h2>
+            <p>أفضل لعبة كرة قدم حديثة مع رسومات واقعية</p>
+        </section>
+
+        <div class="game-content">
+            <div class="game-info">
+                <h3>معلومات اللعبة</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <strong>المطور:</strong>
+                        <p>EA Sports</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>سنة الإصدار:</strong>
+                        <p>2024</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>النوع:</strong>
+                        <p>رياضة، محاكاة</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>التقييم:</strong>
+                        <p>★★★★★ (9.4/10)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-description">
+                <h3>وصف اللعبة</h3>
+                <p>احترف لعبة كرة القدم مع أفضل لعبة في السوق! رسومات واقعية مذهلة بتفاصيل دقيقة جداً. اختر فريقك المفضل من العالم الحقيقي واللعب ضد أفضل الفرق العالمية في دوريات مختلفة وبطولات ملحمية.</p>
+                <p>تحكم في الاعبين واستخدم التكتيكات المختلفة لتحقيق النصر. جرب المهارات المتقدمة والتمريرات الدقيقة والتصويب التسديدات القاسية. كل مباراة تحدي جديد ومثير!</p>
+            </div>
+
+            <div class="gameplay-features">
+                <h3>مميزات اللعبة</h3>
+                <ul class="features-list">
+                    <li>⚽ رسومات واقعية بجودة 4K</li>
+                    <li>🏟️ ملاعب حقيقية من جميع أنحاء العالم</li>
+                    <li>🎮 تحكم دقيق وألعاب حقيقية</li>
+                    <li>🌍 فرق ولاعبون حقيقيون من العالم</li>
+                    <li>🏆 دوريات وبطولات عالمية</li>
+                    <li>📊 نظام نقل اللاعبين وإدارة الفريق</li>
+                </ul>
+            </div>
+
+            <button class="start-btn">▶️ ابدأ اللعب الآن</button>
+        </div>
+    </main>
+
+    <footer class="games-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>حول هذه اللعبة</h4>
+                <p>لعبة كرة قدم واقعية عالمية</p>
+            </div>
+            <div class="footer-section">
+                <h4>الروابط</h4>
+                <ul>
+                    <li><a href="../../index.html">الصفحة الرئيسية</a></li>
+                    <li><a href="../play.html">قسم الألعاب</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Game Hub. جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script>
+        // Logout button functionality
+        document.getElementById('logout-btn').addEventListener('click', function() {
+            localStorage.removeItem('currentUser');
+            localStorage.removeItem('lang');
+            window.location.href = '../log.html';
+        });
+
+        // Language toggle
+        document.getElementById('lang-toggle').addEventListener('click', function() {
+            const currentLang = localStorage.getItem('lang') || 'ar';
+            const newLang = currentLang === 'ar' ? 'en' : 'ar';
+            localStorage.setItem('lang', newLang);
+            location.reload();
+        });
+
+        // Start game button
+        document.querySelector('.start-btn').addEventListener('click', function() {
+            alert('🎮 شكراً لك على اختيار لعبتنا! يمكنك الآن البدء باللعب.');
+            this.textContent = '⏸️ جاري التشغيل...';
+            setTimeout(() => {
+                this.textContent = '▶️ استأنف اللعب';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

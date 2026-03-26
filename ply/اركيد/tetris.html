@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تيتريس - Game Hub</title>
+    <link rel="stylesheet" href="../عالم مفتوح/game-play.css">
+</head>
+<body>
+    <header class="games-header">
+        <div class="header-content">
+            <div class="logo-section">
+                <a href="../../index.html" class="logo-link">
+                    <img src="../../gaming_13119663.png" alt="Game Hub Logo" class="logo">
+                    <h1>Game Hub</h1>
+                </a>
+            </div>
+            <nav class="games-nav">
+                <a href="../../index.html" class="nav-link">الرئيسية</a>
+                <a href="../play.html" class="nav-link">قسم الألعاب</a>
+                <a href="a.html" class="nav-link">العودة</a>
+            </nav>
+            <div class="header-actions">
+                <button id="lang-toggle" class="lang-btn">🌐 EN</button>
+                <button id="logout-btn" class="logout-btn">خروج</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="games-main">
+        <section class="game-intro">
+            <h2>📦 تيتريس</h2>
+            <p>تحدي الدقة والسرعة مع أسطورة الألعاب</p>
+        </section>
+
+        <div class="game-content">
+            <div class="game-info">
+                <h3>معلومات اللعبة</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <strong>المطور:</strong>
+                        <p>Blue Planet</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>سنة الإصدار:</strong>
+                        <p>2024</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>النوع:</strong>
+                        <p>ألغاز، أركيد</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>التقييم:</strong>
+                        <p>★★★★★ (9.3/10)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-description">
+                <h3>وصف اللعبة</h3>
+                <p>لعبة الألغاز الكلاسيكية تيتريس نسخة حديثة محسنة! رتب القطع الملونة بذكاء لملء الصفوف الأفقية وحققها للحصول على نقاط. كل مستوى يصبح أصعب والقطع تسقط أسرع، مما يتطلب تركيزاً عالياً والعاباً حادة.</p>
+                <p>تحتوي اللعبة على عدة أوضاع لعب مختلفة بما فيها الوضع الكلاسيكي والوضع المحدود بالوقت والتحديات الخاصة. جرب مهاراتك وسجل أعلى النقاط على الترتيب العالمي!</p>
+            </div>
+
+            <div class="gameplay-features">
+                <h3>مميزات اللعبة</h3>
+                <ul class="features-list">
+                    <li>🎯 ملعب لعب ذكي مع أنظمة حديثة</li>
+                    <li>⚡ صعوبة متزايدة وتحديات مثيرة</li>
+                    <li>🎨 رسومات جميلة وألوان زاهية</li>
+                    <li>🏅 إنجازات وتحديات يومية</li>
+                    <li>🌍 مقارنة النقاط مع اللاعبين حول العالم</li>
+                    <li>📊 إحصائيات تفصيلية للأداء</li>
+                </ul>
+            </div>
+
+            <button class="start-btn">▶️ ابدأ اللعب الآن</button>
+        </div>
+    </main>
+
+    <footer class="games-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>حول هذه اللعبة</h4>
+                <p>لعبة ألغاز كلاسيكية خالدة</p>
+            </div>
+            <div class="footer-section">
+                <h4>الروابط</h4>
+                <ul>
+                    <li><a href="../../index.html">الصفحة الرئيسية</a></li>
+                    <li><a href="../play.html">قسم الألعاب</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Game Hub. جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script>
+        // Logout button functionality
+        document.getElementById('logout-btn').addEventListener('click', function() {
+            localStorage.removeItem('currentUser');
+            localStorage.removeItem('lang');
+            window.location.href = '../log.html';
+        });
+
+        // Language toggle
+        document.getElementById('lang-toggle').addEventListener('click', function() {
+            const currentLang = localStorage.getItem('lang') || 'ar';
+            const newLang = currentLang === 'ar' ? 'en' : 'ar';
+            localStorage.setItem('lang', newLang);
+            location.reload();
+        });
+
+        // Start game button
+        document.querySelector('.start-btn').addEventListener('click', function() {
+            alert('🎮 شكراً لك على اختيار لعبتنا! يمكنك الآن البدء باللعب.');
+            this.textContent = '⏸️ جاري التشغيل...';
+            setTimeout(() => {
+                this.textContent = '▶️ استأنف اللعب';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

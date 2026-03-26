@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سايبربانك 2077 - Game Hub</title>
+    <link rel="stylesheet" href="game-play.css">
+</head>
+<body>
+    <header class="games-header">
+        <div class="header-content">
+            <div class="logo-section">
+                <a href="../../index.html" class="logo-link">
+                    <img src="../../gaming_13119663.png" alt="Game Hub Logo" class="logo">
+                    <h1>Game Hub</h1>
+                </a>
+            </div>
+            <nav class="games-nav">
+                <a href="../../index.html" class="nav-link">الرئيسية</a>
+                <a href="../play.html" class="nav-link">قسم الألعاب</a>
+                <a href="open.html" class="nav-link">العودة</a>
+            </nav>
+            <div class="header-actions">
+                <button id="lang-toggle" class="lang-btn">🌐 EN</button>
+                <button id="logout-btn" class="logout-btn">خروج</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="games-main">
+        <section class="game-intro">
+            <h2>🌃 سايبربانك 2077</h2>
+            <p>استكشف مدينة نايت سيتي المستقبلية والخطيرة</p>
+        </section>
+
+        <div class="game-content">
+            <div class="game-info">
+                <h3>معلومات اللعبة</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <strong>المطور:</strong>
+                        <p>CD Projekt Red</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>سنة الإصدار:</strong>
+                        <p>2020</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>النوع:</strong>
+                        <p>أكشن، مغامرة، مستقبلي</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>التقييم:</strong>
+                        <p>★★★★☆ (8.5/10)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-description">
+                <h3>وصف اللعبة</h3>
+                <p>لعبة مستقبلية ضخمة في عالم مفتوح تدور في مدينة نايت سيتي المزدحمة والخطيرة. تلعب دور هيف (V)، مرتزقة طموحة بقدرات خاصة تسعى لتحقيق أحلامك والبقاء على قيد الحياة في عالم مليء بالتكنولوجيا والمؤامرات والخيانات.</p>
+                <p>غوص في عالم سايبر بانك الحقيقي، استمتع بقتال مثير، وقم بخيارات معقدة تؤثر على مسارك. اكتسب التحسينات السايبرية، واستكشف نايت سيتي الشاسعة، والالتقي بشخصيات فريدة في رحلة درامية.</p>
+            </div>
+
+            <div class="gameplay-features">
+                <h3>مميزات اللعبة</h3>
+                <ul class="features-list">
+                    <li>🌆 عالم مستقبلي شاسع بتفاصيل لا شعورية</li>
+                    <li>⚙️ نظام تحسينات سايبرية متقدم ومرن</li>
+                    <li>🔫 قتال مثير مع أسلحة تكنولوجية متعددة</li>
+                    <li>🎭 قصة درامية معقدة مع خيارات جذرية</li>
+                    <li>🌐 عالم حي يتفاعل مع خياراتك</li>
+                    <li>🏆 محطة بحثية تحديثات مستمرة</li>
+                </ul>
+            </div>
+
+            <button class="start-btn">▶️ ابدأ اللعب الآن</button>
+        </div>
+    </main>
+
+    <footer class="games-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>حول هذه اللعبة</h4>
+                <p>ملحمة المستقبل الحديثة المثيرة</p>
+            </div>
+            <div class="footer-section">
+                <h4>الروابط</h4>
+                <ul>
+                    <li><a href="../../index.html">الصفحة الرئيسية</a></li>
+                    <li><a href="../play.html">قسم الألعاب</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Game Hub. جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script>
+        // Logout button functionality
+        document.getElementById('logout-btn').addEventListener('click', function() {
+            localStorage.removeItem('currentUser');
+            localStorage.removeItem('lang');
+            window.location.href = '../log.html';
+        });
+
+        // Language toggle
+        document.getElementById('lang-toggle').addEventListener('click', function() {
+            const currentLang = localStorage.getItem('lang') || 'ar';
+            const newLang = currentLang === 'ar' ? 'en' : 'ar';
+            localStorage.setItem('lang', newLang);
+            location.reload();
+        });
+
+        // Start game button
+        document.querySelector('.start-btn').addEventListener('click', function() {
+            alert('🎮 شكراً لك على اختيار لعبتنا! يمكنك الآن البدء باللعب.');
+            this.textContent = '⏸️ جاري التشغيل...';
+            setTimeout(() => {
+                this.textContent = '▶️ استأنف اللعب';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

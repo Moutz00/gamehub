@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صياد الوحوش 3 - Game Hub</title>
+    <link rel="stylesheet" href="game-play.css">
+</head>
+<body>
+    <header class="games-header">
+        <div class="header-content">
+            <div class="logo-section">
+                <a href="../../index.html" class="logo-link">
+                    <img src="../../gaming_13119663.png" alt="Game Hub Logo" class="logo">
+                    <h1>Game Hub</h1>
+                </a>
+            </div>
+            <nav class="games-nav">
+                <a href="../../index.html" class="nav-link">الرئيسية</a>
+                <a href="../play.html" class="nav-link">قسم الألعاب</a>
+                <a href="open.html" class="nav-link">العودة</a>
+            </nav>
+            <div class="header-actions">
+                <button id="lang-toggle" class="lang-btn">🌐 EN</button>
+                <button id="logout-btn" class="logout-btn">خروج</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="games-main">
+        <section class="game-intro">
+            <h2>⚔️ صياد الوحوش 3: الصيد البري</h2>
+            <p>استمتع بإحدى أفضل ألعاب العالم المفتوح عبر التاريخ</p>
+        </section>
+
+        <div class="game-content">
+            <div class="game-info">
+                <h3>معلومات اللعبة</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <strong>المطور:</strong>
+                        <p>CD Projekt Red</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>سنة الإصدار:</strong>
+                        <p>2015</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>النوع:</strong>
+                        <p>أكشن، مغامرة، فانتازي</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>التقييم:</strong>
+                        <p>★★★★★ (9.3/10)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-description">
+                <h3>وصف اللعبة</h3>
+                <p>لعبة عالم مفتوح ملحمية تدور في عالم فانتازي مظلم ومعقد. تلعب دور جيرالت من ريفيا، صياد وحوش محترف يسعى للعثور على ابنته الضائعة في عالم مليء بالسحر والمخلوقات الأسطورية والتهديدات المرعبة.</p>
+                <p>اللعبة تتميز برواية درامية معقدة، خيارات تؤثر على مسار القصة، ومعارك مثيرة بقتال استراتيجي وسحري. استكشف عوالم شاسعة، قم بمهام متنوعة، والتقي بشخصيات ذات شعور عميق.</p>
+            </div>
+
+            <div class="gameplay-features">
+                <h3>مميزات اللعبة</h3>
+                <ul class="features-list">
+                    <li>🌍 عالم مفتوح شاسع وغني بالتفاصيل</li>
+                    <li>⚔️ قتال استراتيجي ومثير مع نظام سحر فريد</li>
+                    <li>📖 قصة درامية كلاسيكية مع خيارات معقدة</li>
+                    <li>🎭 شخصيات بتطور نفسي عميق وواقعي</li>
+                    <li>🎵 موسيقى تصويرية حائزة على جوائز عالمية</li>
+                    <li>🏆 أكثر من 250 جائزة لعبة السنة</li>
+                </ul>
+            </div>
+
+            <button class="start-btn">▶️ ابدأ اللعب الآن</button>
+        </div>
+    </main>
+
+    <footer class="games-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>حول هذه اللعبة</h4>
+                <p>واحدة من أفضل الألعاب في التاريخ</p>
+            </div>
+            <div class="footer-section">
+                <h4>الروابط</h4>
+                <ul>
+                    <li><a href="../../index.html">الصفحة الرئيسية</a></li>
+                    <li><a href="../play.html">قسم الألعاب</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Game Hub. جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script>
+        // Logout button functionality
+        document.getElementById('logout-btn').addEventListener('click', function() {
+            localStorage.removeItem('currentUser');
+            localStorage.removeItem('lang');
+            window.location.href = '../log.html';
+        });
+
+        // Language toggle
+        document.getElementById('lang-toggle').addEventListener('click', function() {
+            const currentLang = localStorage.getItem('lang') || 'ar';
+            const newLang = currentLang === 'ar' ? 'en' : 'ar';
+            localStorage.setItem('lang', newLang);
+            location.reload();
+        });
+
+        // Start game button
+        document.querySelector('.start-btn').addEventListener('click', function() {
+            alert('🎮 شكراً لك على اختيار لعبتنا! يمكنك الآن البدء باللعب.');
+            this.textContent = '⏸️ جاري التشغيل...';
+            setTimeout(() => {
+                this.textContent = '▶️ استأنف اللعب';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
